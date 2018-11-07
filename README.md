@@ -27,6 +27,10 @@ As this is a newly cloned repo we need to do a few steps:
 1. `npm i` - this will install any dependencies this project needs
 2. `npm run start` - this will start our server. It has been configured to run with nodemon so that the server will restart anytime you make changes.
 
+The server will run on `http://localhost:4000`
+
+If you want to know what the the endpoint should look like for any of the exercises run `npm run solution` and it will start a solutions branch server on `http://localhost:5000`
+
 ## Exercise 1 - `path` & `fs` module 
 ### `path`
 Node is able to access any file on your computer. To find the correct file you can either give it a _relative path_ or an _absolute path_. 
