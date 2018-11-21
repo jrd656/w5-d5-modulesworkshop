@@ -3,14 +3,14 @@
 **author:** - @astroash
 
 ## Contents 
-1. [Prerequisits](#prerequisits)
-2. [Introduction](#Introduction)
-3. [Path & FS](#Exercise-1---path-amp-fs-module)
-4. [URL & Querystring](#Exercise-2---url-amp-querystring-module)
-5. [Request](#Exercise-3---request-module)
-5. [Http](#Exercise-3---http-module)
+1. [Prerequisites](#prerequisites)
+2. [Introduction](#introduction)
+3. [Path & FS](#exercise-1---path--fs-module)
+4. [URL & Querystring](#exercise-2---url--querystring-module)
+5. [Request](#exercise-3---request-module)
+5. [Http](#exercise-3---http-module)
 
-## Prerequisits
+## Prerequisites
 - understanding of how to run a node server
 
 ## Introduction
