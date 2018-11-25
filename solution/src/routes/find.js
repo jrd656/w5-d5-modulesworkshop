@@ -19,9 +19,9 @@ module.exports = ((request, response) => {
   }
 
   // Check the query matches one of our files
-  const bearWhiteList = ['one', 'two', 'three', 'four']
+  const bearsAllowed = ['one', 'two', 'three', 'four']
 
-  if (!bearWhiteList.includes(bear)) {
+  if (!bearsAllowed.includes(bear)) {
     response.writeHead(404, { 'Content-Type': 'text/plain' })
     response.end('No bear found!')
     return
