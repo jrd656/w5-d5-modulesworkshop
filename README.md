@@ -73,6 +73,10 @@ Path module is full of lots of handy methods to allow you to create and work wit
 - set the content type to `image/jpeg`
 - return the image using `response.end()`
 
+###  How do I know if I got it right?
+- On your browser, go to the route you just built a handler for and you should see a picture of a bear
+- If you get stuck, try using `console.log` in your server to see what is happening
+
 ## Exercise 2 - `url` & `querystring` module
 ### `url`
 URLs are split up into lots of different parts:
@@ -135,7 +139,13 @@ eg: `/find?bear=one`
 - check the bear value of the parsed query string. If it is `one` to `four` return the correct bear image.
 - if there is no matching bear or no bear query given return a `400`
 
-## Exercise 3 - `request` module
+###  How do I know if I got it right?
+- On your browser, go to the route you just built a handler for (including a querystring!)
+- What should the querystring be..?
+- If you've put the correct querystring you should see another picture of a bear!
+- There are 4 different pictures you can see depending on your querystring
+
+## Exercise 3a - `request` module
 Request is a very popular module that helps to make HTTP requests as simple as possible and it is built around the Node HTTP core module. [Here](http://stackabuse.com/the-node-js-request-module/) is a brilliant article on the Request module. This can be used for making api calls from your server.
 [📝 see docs](https://github.com/request/request)
 
@@ -147,7 +157,7 @@ We are going to write the `/random` handler to return a random bear gif.
 - install the request module `npm i request`
 - go to https://developers.giphy.com, sign up for an account and then create a new app on their site. 
 - make an api call to giphy's [random endpoint](https://developers.giphy.com/docs/#path--gifs-random)
-- return an html `<img>` element with with the src pointing to giphy
+- return an html `<img>` element with with the src pointing to a gif on giphy which has a bear tag
 <details>
   <summary>
   Hint
@@ -155,7 +165,11 @@ We are going to write the `/random` handler to return a random bear gif.
 You can create the string html element by using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> or adding the string together
 </details>
 
-## Exercise 3 - `http` module
+###  How do I know if I got it right?
+- On your browser, go to the route you just built a handler for
+- You should see a random bear gif!
+
+## Exercise 3b - `http` module
 > But I thought that this workshop was about learning core node modules?
 
 You're right! `request` is not a core module, as it does not come bundled with node. We are going to find out what this module is doing under the hood by rewriting it using the `http.get` method. 
@@ -175,3 +189,10 @@ Great! In that case, I'm not going help you!
   - google for help
   - don't look at the solutions branch 🤷🏽‍
 </details>
+
+### Let's do it
+- In `random.js` instead of setting the function you just made out equal to `module.exports`, move it out of `module.exports` and give it a different name
+- Then set `module.exports` equal to a new function which does _exactly_ the same thing, but using the `http` module instead of request!
+
+###  How do I know if I got it right?
+- It should be exactly the same as 3a!

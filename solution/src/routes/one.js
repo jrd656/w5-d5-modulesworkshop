@@ -2,8 +2,14 @@ const path = require('path')
 const fs = require('fs')
 
 module.exports = ((request, response) => {
-  const imgPath = path.join(__dirname,'..', 'woods', 'bear_one.jpg')
-  const image = fs.readFileSync(imgPath)
-  response.writeHead(200, {'Content-type':'image/jpg'})
-  return response.end(image)
+  const pathToBearOne = path.join(__dirname, '..', 'woods', 'bear_one.jpg')
+  fs.readFile(pathToBearOne, (err, file) => {
+    if (err) {
+      response.writeHead(500, { 'Content-Type': 'text/plain' })
+      response.end('Sorry, the server broke...')
+      return
+    }
+    response.writeHead(200, { 'Content-Type': 'image/jpeg' })
+    response.end(file)
+  })
 })
